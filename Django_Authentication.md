@@ -371,41 +371,21 @@ python manage.py runserver
 - Create templates/registration folder and login.html under this folder. This name is unique Django will look for this name.
 
 ```html
-<h1>Hello this is login page!</h1>
+{% extends "base.html" %}
 
-{# Optional #}
-{# If the user enters wrong password, an error message will be shown #}
-{% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{# Optional #}
-{% if next %}
-    {% if user.is_authenticated %}
-        <p>Your account doesn't have access to this page. To proceed,
-        please login with an account that has access.</p>
-    {% else %}
-        <p>Please login to see this page.</p>
-    {% endif %}
-{% endif %}
-    
+{% block content %}
 
 <form action="{% url 'login' %}" method="post">
 
     {% csrf_token %}
-
-    <p>Username: {{ form.username }}</p>
-    <p>Password: {{ form.password }}</p>
-
-    <input type="submit" value="login">
     
-    <input type="hidden" value="{{ next }}" name="next">
+    {{ form.as_p }}
+
+    <input type="submit" value="Login">
 
 </form>
 
-{# Optional #}
-{# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+{% endblock %}
 ```
 - This will display a form in which you can enter your username and password, and that if you enter invalid values you will be prompted to enter correct values when the page refreshes.
 
