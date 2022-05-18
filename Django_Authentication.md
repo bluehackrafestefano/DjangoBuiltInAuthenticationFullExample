@@ -526,7 +526,7 @@ First look at regular password change and password change done behaviour of Djan
 
 Implementing a built-in password change in Django is very easy. Django provides authentication and authorization. For changing password you need to get authenticated first.
 
-In your urls.py, we need to import PasswordChangeView from Django Auth. By default, Django PasswordChangeView will render template registration/change_password.html. But we need some customization and we’ll tell PasswordChangeView to render a different-named template from registration/change-password.html. 
+In your urls.py, we need to import PasswordChangeView from Django Auth. By default, Django PasswordChangeView will render a standard template. But we need some customization and we’ll tell PasswordChangeView to render a different-named template from registration/change-password.html. 
 
 "success_url" is also a way to redirect a user after changing the password successfully.
 
