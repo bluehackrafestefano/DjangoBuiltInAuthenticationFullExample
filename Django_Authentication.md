@@ -528,7 +528,7 @@ Implementing a built-in password change in Django is very easy. Django provides 
 
 In your urls.py, we need to import PasswordChangeView from Django Auth. By default, Django PasswordChangeView will render a standard template. But we need some customization and we’ll tell PasswordChangeView to render a different-named template from registration/change-password.html. 
 
-"success_url" is also a way to redirect a user after changing the password successfully.
+"success_url" is the URL to redirect to after a successful password change. Defaults to 'password_change_done'.
 
 ```py
 from django.contrib.auth import views as auth_views
@@ -640,12 +640,11 @@ EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 
 ### Logout
 
-Want to redirect to home page when logout
+If you want to redirect to the home page when logout, add this variable to the settings.py:
 
-Add settings.py
-
+```py
 LOGOUT_REDIRECT_URL = '/'
-
+```
 
 ### The login_required decorator
 
@@ -653,7 +652,7 @@ Look at this link you may use this decorator as a part of auth system.
 
 [Login Required Decorator Documentation](https://docs.djangoproject.com/en/4.0/topics/auth/default/#the-login-required-decorator)
 
-Try it by creating a special page!
+Try it by creating a special page! Or simply add it to the home page.
 
 ```py
 from django.contrib.auth.decorators import login_required
@@ -663,12 +662,8 @@ def my_view(request):
     pass
 ```
 
-### Links to official documentation
+### Next Steps
 
-https://docs.djangoproject.com/en/4.0/topics/auth/default/
+Using the built-in Django auth system is easy. But be ready to make some customization.
 
-https://docs.djangoproject.com/en/4.0/ref/settings/
-
-https://django-allauth.readthedocs.io/en/latest/overview.html
-
-https://docs.djangoproject.com/en/4.0/topics/auth/customizing/
+Search for the documentation in this class note whenever you have questions. Keep yourself up-to-date.
