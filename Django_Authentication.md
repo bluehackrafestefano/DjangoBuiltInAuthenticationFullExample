@@ -1,5 +1,17 @@
-# Django Class Notes
-Authentications
+
+<center><img src="cohort_007.jpg"  alt="Clarusway" width="600"/></center>
+<br>
+
+<center><h1> Django Class Notes</h1></center>
+<p>Clarusway<img align="right"
+  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
+<br>
+
+
+
+
+# Django Authentication System - 1 ( Built-In )
+
 
 ### Nice to have VSCode Extentions:
 - Djaneiro - Django Snippets  (Be carefull about other conflicting extentions!)
@@ -667,3 +679,10 @@ def my_view(request):
 Using the built-in Django auth system is easy. But be ready to make some customization.
 
 Search for the documentation in this class note whenever you have questions. Keep yourself up-to-date.
+
+<br>
+
+**<p align="center">&#9786; Happy Coding! &#9997;</p>**
+
+<p>Clarusway<img align="right"
+  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
